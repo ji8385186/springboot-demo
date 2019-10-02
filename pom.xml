@@ -43,6 +43,18 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <repository>
+            <id>xdclass-releases</id>
+            <name>Ruizhi Release Repository</name>
+        <url>http://10.0.0.12:8081/repository/maven-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>xdclass-snapshots</id>
+            <name>Ruizhi Snapshot Repository</name>
+            <url>http://10.0.0.12:8081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -52,6 +64,16 @@
 
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.liveramp/jack-core -->
+        <!-- https://mvnrepository.com/artifact/com.liveramp/jack-mysql -->
+        <dependency>
+            <groupId>com.liveramp</groupId>
+            <artifactId>jack-mysql</artifactId>
+            <version>1.4.2</version>
+        </dependency>
+
+
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -103,4 +125,5 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
     </dependencies>
+
 </project>
